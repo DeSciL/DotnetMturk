@@ -55,6 +55,13 @@
     <Compile Include="Advanced\SoapTrace.cs" />
     <Compile Include="Advanced\TraceLogger.cs" />
     <Compile Include="Advanced\XmlFormatter.cs" />
+    <Compile Include="Domain\AnswerKey.cs" />
+    <Compile Include="Domain\AWSMechanicalTurkRequester.cs" />
+    <Compile Include="Domain\ExternalQuestion.cs" />
+    <Compile Include="Domain\FormattedContentXHTMLSubset.cs" />
+    <Compile Include="Domain\HTMLQuestion.cs" />
+    <Compile Include="Domain\QuestionForm.cs" />
+    <Compile Include="Domain\QuestionFormAnswers.cs" />
     <Compile Include="Exceptions\AccessKeyException.cs" />
     <Compile Include="Exceptions\ExceedsMaxAssignmentsPerWorkerException.cs" />
     <Compile Include="Exceptions\HitLayoutDoesNotExistException.cs" />
@@ -102,12 +109,6 @@
     <None Include="Resources\QuestionFormAnswers.xsd">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Amazon.WebServices.MechanicalTurk.Domain\Amazon.WebServices.MechanicalTurk.Domain.csproj">
-      <Project>{5fcec3ab-a92e-4c04-bd0a-801372b1cefa}</Project>
-      <Name>Amazon.WebServices.MechanicalTurk.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
