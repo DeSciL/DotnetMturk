@@ -1378,7 +1378,6 @@ namespace Amazon.WebServices.MechanicalTurk
                 false);
         }
 
-
         /// <summary>
         /// Creates a new HIT from a populated HIT domain object
         /// </summary>
@@ -1454,6 +1453,25 @@ namespace Amazon.WebServices.MechanicalTurk
                 null,       // retryDelayInSeconds 
                 null,       // autoGranted 
                 null);      // autoGrantedValue
+        }
+
+        /// <summary>
+        /// Updates the description and status of a qualification type
+        /// </summary>
+        public QualificationType UpdateQualificationTypeFull(string qualificationTypeId, string description,
+            QualificationTypeStatus? status, string test, string answerKey, long? testDurationInSeconds,
+            long? retryDelayInSeconds, bool? autoGranted, int? autoGrantedValue)
+        {
+            return UpdateQualificationType(
+                qualificationTypeId,
+                description,
+                status,
+                test,
+                answerKey,
+                testDurationInSeconds,
+                retryDelayInSeconds,
+                autoGranted,
+                autoGrantedValue);
         }
 
         /// <summary>
