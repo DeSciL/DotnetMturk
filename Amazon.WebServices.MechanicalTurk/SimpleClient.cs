@@ -30,15 +30,18 @@ namespace Amazon.WebServices.MechanicalTurk
     public class SimpleClient : ITurkConfig
     {
         #region Constants
+
         // Note: assignment status and response groups remain type arrays rather than IList<Type>, since these are fairly static and we
         // want to avoid unnecessary object instantiations when passing these on to the WSDL layer
         private static AssignmentStatus[] DefaultAssignmentStatus = new AssignmentStatus[] { AssignmentStatus.Approved, AssignmentStatus.Rejected, AssignmentStatus.Submitted };
         private static long DefaultAssignmentDurationInSeconds = (long)60 * 60; // 1 hour
         private static long DefaultAutoApprovalDelayInSeconds = (long)60 * 60 * 24 * 15; // 15 days
         private static long DefaultLifeTimeInSeconds = (long)60 * 60 * 24 * 3; // 3 days
+
         #endregion
 
         #region Properties
+
         private ITurkOperations _proxy;
         /// <summary>
         /// The client proxy used to send the messages
@@ -48,6 +51,7 @@ namespace Amazon.WebServices.MechanicalTurk
             get { return this._proxy; }
             set { this._proxy = value; }
         }
+
         #endregion
 
         #region Constructors
@@ -163,8 +167,6 @@ namespace Amazon.WebServices.MechanicalTurk
                 reward, assignmentDurationInSeconds, autoApprovalDelayInSeconds, lifetimeInSeconds,
                 maxAssignments, requesterAnnotation, qualificationRequirements, responseGroup);
         }
-
-
 
         /// <summary>
         /// See <a href="http://docs.amazonwebservices.com/AWSMechTurk/2012-03-25/AWSMturkAPI/ApiReference_CreateHITOperation.html">online documentation for this operation.</a>
@@ -313,7 +315,6 @@ namespace Amazon.WebServices.MechanicalTurk
 
             return Proxy.CreateHIT(req);
         }
-
 
         /// <summary>
         /// See <a href="http://docs.amazonwebservices.com/AWSMechTurk/2012-03-25/AWSMturkAPI/ApiReference_RegisterHITTypeOperation.html">online documentation for this operation.</a>
@@ -1271,7 +1272,6 @@ namespace Amazon.WebServices.MechanicalTurk
             Proxy.UnblockWorker(request);
         }
 
-
         /// <summary>
         /// See <a href="http://docs.amazonwebservices.com/AWSMechTurk/2012-03-25/AWSMturkAPI/ApiReference_GetBlockedWorkerOperation.html">online documentation for this operation.</a>
         /// </summary>
@@ -1323,6 +1323,7 @@ namespace Amazon.WebServices.MechanicalTurk
 
             Proxy.ChangeHITTypeOfHIT(request);
         }
+
         #endregion
 
         #region Convenience overloads
@@ -1762,8 +1763,8 @@ namespace Amazon.WebServices.MechanicalTurk
             return errors;
         }
 
-
         #region GetAll... methods
+
         /// <summary>
         /// Gets the type of all qualifications for qualification.
         /// </summary>
@@ -2002,11 +2003,13 @@ namespace Amazon.WebServices.MechanicalTurk
 
             yield break;
         }
+
         #endregion
 
         #endregion
 
         #region HIT serialization and deserialization
+
         /// <summary>
         /// Serializes the HIT in XML format and saves it to the specified file
         /// </summary>
@@ -2148,6 +2151,7 @@ namespace Amazon.WebServices.MechanicalTurk
         #endregion
 
         #region Miscellaneous helpers
+
         /// <summary>
         /// Returns the URL, where the HIT can be viewed at the worker website or "n/a" if HIT was not 
         /// yet created or loaded.
@@ -2156,6 +2160,7 @@ namespace Amazon.WebServices.MechanicalTurk
         {
             return Config.GetPreviewURL(hitTypeID);
         }
+
         #endregion
 
         #region ITurkConfig Members
