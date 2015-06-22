@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02613F61-EA52-478D-A5AA-1120053AA4EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Amazon.WebServices.MechanicalTurk</RootNamespace>
+    <AssemblyName>Amazon.WebServices.MechanicalTurk</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Amazon.WebServices.MechanicalTurk.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advanced\HITData.cs" />
+    <Compile Include="Advanced\ILog.cs" />
+    <Compile Include="Advanced\IModelObjectFormatter.cs" />
+    <Compile Include="Advanced\IRequestThrottler.cs" />
+    <Compile Include="Advanced\ITurkConfig.cs" />
+    <Compile Include="Advanced\ITurkOperations.cs" />
+    <Compile Include="Advanced\LeakyBucketRequestThrottler.cs" />
+    <Compile Include="Advanced\MTurkLog.cs" />
+    <Compile Include="Advanced\PropertyFormatter.cs" />
+    <Compile Include="Advanced\RequestThrottler.cs" />
+    <Compile Include="Advanced\SoapTrace.cs" />
+    <Compile Include="Advanced\TraceLogger.cs" />
+    <Compile Include="Advanced\XmlFormatter.cs" />
+    <Compile Include="Exceptions\AccessKeyException.cs" />
+    <Compile Include="Exceptions\ExceedsMaxAssignmentsPerWorkerException.cs" />
+    <Compile Include="Exceptions\HitLayoutDoesNotExistException.cs" />
+    <Compile Include="Exceptions\InsufficientFundsException.cs" />
+    <Compile Include="Exceptions\InvalidParameterValueException.cs" />
+    <Compile Include="Exceptions\InvalidStateException.cs" />
+    <Compile Include="Exceptions\InvalidTransportEndpointException.cs" />
+    <Compile Include="Exceptions\NoHITsAvailableException.cs" />
+    <Compile Include="Exceptions\ObjectAlreadyExistsException.cs" />
+    <Compile Include="Exceptions\ObjectDoesNotExistException.cs" />
+    <Compile Include="Exceptions\ParseErrorException.cs" />
+    <Compile Include="Exceptions\PermissionDeniedException.cs" />
+    <Compile Include="Exceptions\QualificationTypeRetryException.cs" />
+    <Compile Include="Exceptions\ServiceException.cs" />
+    <Compile Include="ITransportProtocol.cs" />
+    <Compile Include="Misc\HMACSigner.cs" />
+    <Compile Include="Misc\MTurkConstants.cs" />
+    <Compile Include="Misc\QuestionUtil.cs" />
+    <Compile Include="Misc\ReflectionCache.cs" />
+    <Compile Include="Misc\ReflectionUtil.cs" />
+    <Compile Include="Misc\XmlUtil.cs" />
+    <Compile Include="MTurkClient.cs" />
+    <Compile Include="MTurkConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleClient.cs" />
+    <Compile Include="SoapHttpClientTurkProtocol.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnswerKey.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\AWSMechanicalTurkRequester.wsdl" />
+    <None Include="Resources\ExternalQuestion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\FormattedContentXHTMLSubset.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\HTMLQuestion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\QuestionForm.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\QuestionFormAnswers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Amazon.WebServices.MechanicalTurk.Domain\Amazon.WebServices.MechanicalTurk.Domain.csproj">
+      <Project>{5fcec3ab-a92e-4c04-bd0a-801372b1cefa}</Project>
+      <Name>Amazon.WebServices.MechanicalTurk.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.WebServices.MechanicalTurk", "Amazon.WebServices.MechanicalTurk\Amazon.WebServices.MechanicalTurk.csproj", "{02613F61-EA52-478D-A5AA-1120053AA4EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.WebServices.MechanicalTurk.Domain", "Amazon.WebServices.MechanicalTurk.Domain\Amazon.WebServices.MechanicalTurk.Domain.csproj", "{5FCEC3AB-A92E-4C04-BD0A-801372B1CEFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.WebServices.MechanicalTurk.Test", "Amazon.WebServices.MechanicalTurk.Test\Amazon.WebServices.MechanicalTurk.Test.csproj", "{AEF65C47-309B-40FE-A193-1D702735503C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5F23042-A1C6-43ED-A394-80B8E17287B2}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02613F61-EA52-478D-A5AA-1120053AA4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02613F61-EA52-478D-A5AA-1120053AA4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02613F61-EA52-478D-A5AA-1120053AA4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02613F61-EA52-478D-A5AA-1120053AA4EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FCEC3AB-A92E-4C04-BD0A-801372B1CEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCEC3AB-A92E-4C04-BD0A-801372B1CEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCEC3AB-A92E-4C04-BD0A-801372B1CEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCEC3AB-A92E-4C04-BD0A-801372B1CEFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF65C47-309B-40FE-A193-1D702735503C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF65C47-309B-40FE-A193-1D702735503C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF65C47-309B-40FE-A193-1D702735503C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF65C47-309B-40FE-A193-1D702735503C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
