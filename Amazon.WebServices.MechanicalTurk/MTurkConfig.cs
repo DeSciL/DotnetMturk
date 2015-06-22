@@ -546,8 +546,6 @@ namespace Amazon.WebServices.MechanicalTurk
             }
         }
 
-
-
         /// <summary>
         /// Returns a <see cref="T:System.String"></see> that represents the current <see cref="T:System.Object"></see>.
         /// </summary>

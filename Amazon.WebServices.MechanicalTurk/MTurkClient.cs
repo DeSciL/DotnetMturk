@@ -50,6 +50,7 @@ namespace Amazon.WebServices.MechanicalTurk
         }
 
         #region Properties
+
         // transport protocol used (currently only support for SOAP/Http-POST)
         private ITransportProtocol _protocol;
         /// <summary>
@@ -108,9 +109,11 @@ namespace Amazon.WebServices.MechanicalTurk
             get { return (this._throttler); }
             set { this._throttler = value; }
         }
+
 		#endregion
 
         #region Constructors
+
         /// <summary>
 		/// Initializes a Mechanical Turk client using the configuration from the application configuration file (see <see cref="MTurkConfig"/>)
 		/// </summary>
@@ -129,9 +132,11 @@ namespace Amazon.WebServices.MechanicalTurk
 	    {	    	                                                      
 	        Config = config;
 	    }
+
 	    #endregion        
 	    
         #region Helpers
+
         /// <summary>
         /// Ensures that the question settings from <see cref="MTurkConfig"/> are enforced 
         /// (implicit wrapping and validation)
@@ -333,6 +338,7 @@ namespace Amazon.WebServices.MechanicalTurk
 
             throw new ServiceException("AWS.MechanicalTurk.GenericError", sb.ToString(), ret);
         }
+
         #endregion
 
         /// <summary>
@@ -447,7 +453,6 @@ namespace Amazon.WebServices.MechanicalTurk
 
             
         }
-
 
         /// <summary>
 	    /// Signs and sends the request and parses errors (if any)
@@ -604,6 +609,7 @@ namespace Amazon.WebServices.MechanicalTurk
 	    }
 
         #region ITurkOperations implementation
+
         /// <summary>
         /// The GetAccountBalance operation retrieves the amount of money your 
         /// Amazon Mechanical Turk account, as well as the

@@ -27,6 +27,7 @@ namespace Amazon.WebServices.MechanicalTurk
         private static Regex htmlContentSplitter = new Regex("<HTMLContent>", RegexOptions.Compiled);
 
         #region Constructors
+
         static QuestionUtil()
         {
             string xmlNamespace = "http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd";
@@ -66,9 +67,11 @@ namespace Amazon.WebServices.MechanicalTurk
         private QuestionUtil()
         {
         }
+
         #endregion
 
         #region Question handling
+
         private static string TPL_FREE_TEXT_QUESTION_FORM = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
             "<QuestionForm xmlns=\"@NAMESPACE@\">" +
@@ -408,6 +411,7 @@ namespace Amazon.WebServices.MechanicalTurk
 
             return (QuestionFormAnswers)XmlUtil.DeserializeXML(typeof(QuestionFormAnswers), xml);
         }
+
 		#endregion
 	}
 }
