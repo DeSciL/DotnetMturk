@@ -164,6 +164,8 @@ namespace Amazon.WebServices.MechanicalTurk
                 maxAssignments, requesterAnnotation, qualificationRequirements, responseGroup);
         }
 
+
+
         /// <summary>
         /// See <a href="http://docs.amazonwebservices.com/AWSMechTurk/2012-03-25/AWSMturkAPI/ApiReference_CreateHITOperation.html">online documentation for this operation.</a>
         /// </summary>
@@ -182,6 +184,20 @@ namespace Amazon.WebServices.MechanicalTurk
         /// <param name="responseGroup">The response group.</param>
         /// <returns>A <see cref="HIT"/> instance</returns>
         public HIT CreateHIT(string hitTypeId, string title, string description, string keywords, ExternalQuestion externalQuestion,
+            decimal? reward, long? assignmentDurationInSeconds, long? autoApprovalDelayInSeconds, long lifetimeInSeconds,
+            int? maxAssignments, string requesterAnnotation, List<QualificationRequirement> qualificationRequirements,
+            string[] responseGroup)
+        {
+            return CreateHIT(hitTypeId, title, description, keywords,
+                QuestionUtil.SerializeExternalQuestion(externalQuestion),
+                reward, assignmentDurationInSeconds, autoApprovalDelayInSeconds, lifetimeInSeconds,
+                maxAssignments, requesterAnnotation, qualificationRequirements, responseGroup);
+        }
+
+        /// <summary>
+        /// Convenience Overload for PowerShell Access
+        /// </summary>
+        public HIT CreateExternalHIT(string hitTypeId, string title, string description, string keywords, ExternalQuestion externalQuestion,
             decimal? reward, long? assignmentDurationInSeconds, long? autoApprovalDelayInSeconds, long lifetimeInSeconds,
             int? maxAssignments, string requesterAnnotation, List<QualificationRequirement> qualificationRequirements,
             string[] responseGroup)
