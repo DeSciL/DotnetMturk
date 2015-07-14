@@ -3276,6 +3276,15 @@ public enum Comparator {
     
     /// <remarks/>
     Exists,
+
+    /// <remarks/>
+    DoesNotExist,
+
+    /// <remarks/>
+    In,
+
+    /// <remarks/>
+    NotIn,
 }
 
 /// <remarks/>
