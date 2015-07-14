@@ -1145,7 +1145,8 @@ namespace Amazon.WebServices.MechanicalTurk.Domain{
         private string coordsField;
         
         private string targetField;
-        
+
+        /// <remarks/>
         public a() {
             this.shapeField = Shape.rect;
         }
@@ -1315,7 +1316,8 @@ namespace Amazon.WebServices.MechanicalTurk.Domain{
         private string titleField;
         
         private brClear clearField;
-        
+
+        /// <remarks/>
         public br() {
             this.clearField = brClear.none;
         }
@@ -1981,7 +1983,8 @@ namespace Amazon.WebServices.MechanicalTurk.Domain{
         private string altField;
         
         private string targetField;
-        
+
+        /// <remarks/>
         public area() {
             this.shapeField = Shape.rect;
         }
@@ -2757,7 +2760,8 @@ namespace Amazon.WebServices.MechanicalTurk.Domain{
         private colValign valignField;
         
         private bool valignFieldSpecified;
-        
+
+        /// <remarks/>
         public colgroup() {
             this.spanField = "1";
         }
@@ -2887,7 +2891,8 @@ namespace Amazon.WebServices.MechanicalTurk.Domain{
         private colValign valignField;
         
         private bool valignFieldSpecified;
-        
+
+        /// <remarks/>
         public col() {
             this.spanField = "1";
         }
@@ -3141,7 +3146,8 @@ namespace Amazon.WebServices.MechanicalTurk.Domain{
         private string widthField;
         
         private string heightField;
-        
+
+        /// <remarks/>
         public th() {
             this.rowspanField = "1";
             this.colspanField = "1";
@@ -3421,7 +3427,8 @@ namespace Amazon.WebServices.MechanicalTurk.Domain{
         private string widthField;
         
         private string heightField;
-        
+
+        /// <remarks/>
         public td() {
             this.rowspanField = "1";
             this.colspanField = "1";
