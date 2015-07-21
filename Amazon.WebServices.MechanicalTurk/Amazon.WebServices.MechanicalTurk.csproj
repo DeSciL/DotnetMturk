@@ -93,7 +93,9 @@
     <None Include="Resources\AnswerKey.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Resources\AWSMechanicalTurkRequester.wsdl" />
+    <None Include="Resources\AWSMechanicalTurkRequester.wsdl">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\ExternalQuestion.xsd">
       <SubType>Designer</SubType>
     </None>
