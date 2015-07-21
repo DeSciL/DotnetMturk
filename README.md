@@ -17,6 +17,7 @@ Compare the master and vanilla branch for a detailed change log.
 - Dropped all documentation.
 - Added some convenience overloads
 - Minor cleanup
+- Updated to latest Mturk API version (2014-08-15)
 
 ## License
 
