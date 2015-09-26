@@ -1,10 +1,7 @@
-DotnetMturk TODO
+TODO DotnetMturk 
 
 Priority 1
-
-- Examples in how to use the SimpleClient by means of PowerShell (DotnetMturk.ps1)
-- Implement new comparators like DoesNotExist, In, ..., for QaulificationRequirements
+- Add documentation and tests back in.
 
 Priority 2
-
 - Add a new solution with AWS Simple Queue Service for notifications
