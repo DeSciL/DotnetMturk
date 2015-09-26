@@ -831,6 +831,64 @@ namespace Amazon.WebServices.MechanicalTurk
         }
 
         /// <summary>
+        /// See <a href="http://docs.amazonwebservices.com/AWSMechTurk/2012-03-25/AWSMturkAPI/ApiReference_GetBonusPaymentsOperation.html">online documentation for this operation.</a>
+        /// </summary>
+        /// <param name="hitId">The hit id.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <returns>
+        /// A <see cref="GetBonusPaymentsResult"/> instance
+        /// </returns>
+        public GetBonusPaymentsResult GetBonusPaymentsByHit(string hitId, int? pageNumber, int? pageSize)
+        {
+            GetBonusPaymentsRequest request = new GetBonusPaymentsRequest();
+            request.HITId = hitId;
+
+            if (pageNumber.HasValue)
+            {
+                request.PageNumber = pageNumber.Value;
+                request.PageNumberSpecified = true;
+            }
+
+            if (pageSize.HasValue)
+            {
+                request.PageSize = pageSize.Value;
+                request.PageSizeSpecified = true;
+            }
+
+            return Proxy.GetBonusPayments(request);
+        }
+
+        /// <summary>
+        /// See <a href="http://docs.amazonwebservices.com/AWSMechTurk/2012-03-25/AWSMturkAPI/ApiReference_GetBonusPaymentsOperation.html">online documentation for this operation.</a>
+        /// </summary>
+        /// <param name="assignmentId">The assignment id.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <returns>
+        /// A <see cref="GetBonusPaymentsResult"/> instance
+        /// </returns>
+        public GetBonusPaymentsResult GetBonusPaymentsByAssignment(string assignmentId, int? pageNumber, int? pageSize)
+        {
+            GetBonusPaymentsRequest request = new GetBonusPaymentsRequest();
+            request.AssignmentId = assignmentId;
+
+            if (pageNumber.HasValue)
+            {
+                request.PageNumber = pageNumber.Value;
+                request.PageNumberSpecified = true;
+            }
+
+            if (pageSize.HasValue)
+            {
+                request.PageSize = pageSize.Value;
+                request.PageSizeSpecified = true;
+            }
+
+            return Proxy.GetBonusPayments(request);
+        }
+
+        /// <summary>
         /// See <a href="http://docs.amazonwebservices.com/AWSMechTurk/2012-03-25/AWSMturkAPI/ApiReference_CreateQualificationTypeOperation.html">online documentation for this operation.</a>
         /// </summary>
         /// <param name="name">The name.</param>
