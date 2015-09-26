@@ -1,6 +1,6 @@
 # DotnetMturk
 
-The Amazon Mechanical Turk SDK for .Net is a set of libraries and tools designed to make it easier for you to build solutions leveraging Amazon Mechanical Turk. This repo tracks changes from the official version. Current WDSL schema: `2014-08-15`.
+The Amazon Mechanical Turk SDK for .Net is a set of libraries and tools designed to make it easier for you to build solutions leveraging Amazon Mechanical Turk. This repo tracks changes from the official version. Current WSDL schema: `2014-08-15`.
 
 ## Source
 
