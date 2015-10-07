@@ -59,6 +59,7 @@
     <Compile Include="Domain\AWSMechanicalTurkRequester.cs" />
     <Compile Include="Domain\ExternalQuestion.cs" />
     <Compile Include="Domain\FormattedContentXHTMLSubset.cs" />
+    <Compile Include="Domain\HITType.cs" />
     <Compile Include="Domain\HTMLQuestion.cs" />
     <Compile Include="Domain\QuestionForm.cs" />
     <Compile Include="Domain\QuestionFormAnswers.cs" />
