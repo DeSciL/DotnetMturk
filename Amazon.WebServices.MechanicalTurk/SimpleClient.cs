@@ -1257,6 +1257,37 @@ namespace Amazon.WebServices.MechanicalTurk
         }
 
         /// <summary>
+        /// See <a href="http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_GetRequesterWorkerStatisticOperation.html">online documentation for this operation.</a>
+        /// </summary>
+        /// <param name="workerId">The workerId.</param>
+        /// <param name="statistic">A <see cref="RequesterStatistic"/> instance containing the request parameters</param>
+        /// <param name="timePeriod">The time period.</param>
+        /// <param name="count">The count.</param>
+        /// <returns>A <see cref="DataPoint"/> list</returns>
+        public IList<DataPoint> GetRequesterWorkerStatistic(string workerId, RequesterStatistic statistic, TimePeriod? timePeriod, int? count)
+        {
+            GetRequesterWorkerStatisticRequest request = new GetRequesterWorkerStatisticRequest();
+            request.Statistic = statistic;
+            request.WorkerId = workerId;
+
+            if (timePeriod.HasValue)
+            {
+                request.TimePeriod = timePeriod.Value;
+                request.TimePeriodSpecified = true;
+            }
+            if (count.HasValue)
+            {
+                request.Count = count.Value;
+                request.CountSpecified = true;
+            }
+
+            DataPoint[] proxyResult = Proxy.GetRequesterWorkerStatistic(request).DataPoint;
+            List<DataPoint> ret = new List<DataPoint>(proxyResult);
+
+            return ret;
+        }
+
+        /// <summary>
         /// See <a href="http://docs.amazonwebservices.com/AWSMechTurk/2012-03-25/AWSMturkAPI/ApiReference_NotifyWorkersOperation.html">online documentation for this operation.</a>
         /// </summary>
         /// <param name="subject">The subject.</param>
@@ -2012,7 +2043,6 @@ namespace Amazon.WebServices.MechanicalTurk
 
             yield break;
         }
-
 
         /// <summary>
         /// Retrieves all of requester's assignments for the given HIT.
