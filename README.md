@@ -8,7 +8,7 @@ This is a fork of the [Amazon Mechanical Turk SDK for .NET](http://mturkdotnet.c
 
 ## Changes
 
-We have made some minor modification for practical reasons. Compare master and vanilla branchs for [https://github.com/DeSciL/DotnetMturk/compare/vanilla...master](details on changes).
+We have made some minor modification for practical reasons. Compare master and vanilla branchs for [details on changes](https://github.com/DeSciL/DotnetMturk/compare/vanilla...master).
 
 - Merged code into single assembly. Moved Amazon.WebServices.MechanicalTurk.Domain to Amazon.WebServices.MechanicalTurk, namespace logic stays intact.
 - Dropped documentation and outdated tests.
