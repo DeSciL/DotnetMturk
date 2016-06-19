@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Amazon.WebServices.MechanicalTurk</id>
+    <version>1.6.5.1</version>
+    <title>Amazon.WebServices.MechanicalTurk</title>
+    <authors>Amazon.com</authors>
+    <owners>Stefan Wehrli</owners>
+    <licenseUrl>https://raw.githubusercontent.com/DeSciL/MturkDotNet/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/DeSciL/MturkDotNet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.Net SDK for Amazon Mechanical Turk (API Version 2014-08-15)</description>
+    <releaseNotes>https://github.com/DeSciL/MturkDotNet/releases</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Amazon, MechanicalTurk</tags>
+  </metadata>
+</package>
