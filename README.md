@@ -16,7 +16,7 @@ We have made some minor modification for practical reasons. Compare master and v
 - Updated to [Mturk API version 2014-08-15](http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_WsdlLocationArticle.html). New [comparators](http://mechanicalturk.typepad.com/blog/2014/07/new-qualification-comparators-add-greater-flexibility-to-qualifications-.html) like `In` and `NotIn`are included.
 - Workaround for `GetBonusPayments` issue.
 - Added `GetRequesterWorkerStatistic'
-- Use Mturk .Net API from PowerShell. See [dotnetmturk.ps1](https://github.com/DeSciL/DotnetMturk/blob/master/DotnetMturk.ps1) for an example and [PsAmt](https://github.com/DeSciL/PsAmt) for a PowerShell module.
+- Use Mturk .Net API from PowerShell. See [dotnetmturk.ps1](https://github.com/DeSciL/DotnetMturk/blob/master/MturkDotNet.ps1) for an example and [PsAmt](https://github.com/DeSciL/PsAmt) for a PowerShell module.
 
 ## License
 
